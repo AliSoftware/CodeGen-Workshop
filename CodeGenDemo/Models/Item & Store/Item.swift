@@ -21,9 +21,9 @@ extension Item {
         case .ship:
             return UIImage(named: "items/ship")!
         case .person:
-            return UIImage(named: "items/person")!
+            return UIImage(named: "items/person")! // FIXME: crash here. Solve using swiftgen
         case .film:
-            return UIImage(named: "items/film")! // FIXME: crash here. Solve using swiftgen
+            return UIImage(named: "items/movie")! // FIXME: crash here. Solve using swiftgen
         }
     }
 }

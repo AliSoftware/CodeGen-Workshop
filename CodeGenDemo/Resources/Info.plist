@@ -24,10 +24,7 @@
 	<array>
 		<string>SFDistantGalaxy-Italic.ttf</string>
 		<string>SFDistantGalaxy.ttf</string>
-		<string>SFDistantGalaxyAlternate.ttf</string>
 		<string>SFDistantGalaxyAlternate-It.ttf</string>
-		<string>SFDistantGalaxyAltOutline.ttf</string>
-		<string>SFDistantGalaxyAltOutline-I.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

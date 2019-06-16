@@ -84,9 +84,9 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // FIXME: swiftgen storyboards
-        let detailStoryboard = UIStoryboard(name: "ItemList", bundle: nil)
-        let detailVC = detailStoryboard.instantiateViewController(withIdentifier: "Details") as! DetailViewController
+        // FIXME: swiftgen storyboards – Fix the crash
+        let detailStoryboard = UIStoryboard(name: "ItemsList", bundle: nil) // Whoops, crash
+        let detailVC = detailStoryboard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController // crash again
         detailVC.item = items[indexPath.row]
         self.navigationController?.pushViewController(detailVC, animated: true)
     }

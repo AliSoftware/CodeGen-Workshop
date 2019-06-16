@@ -36,7 +36,7 @@ class WelcomeViewController: UIViewController {
 
     private func setupAnimationView() {
         // FIXME: swiftgen json (custom template for Lottie)
-        let possibleAnimations = ["bb8", "lightsaber", "spaceship"]
+        let possibleAnimations = ["bb8", "lightsaber", "rocket"]
 
         guard let animationName = possibleAnimations.randomElement() else { return }
         let animationView = AnimationView(name: animationName)

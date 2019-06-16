@@ -22,8 +22,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // FIXME: swiftgen strings
-        self.title = NSLocalizedString("detail.title", comment: "")
+        // FIXME: swiftgen strings – whoops, wrong key
+        self.title = NSLocalizedString("details.title", comment: "")
 
         // FIXME: swiftgen fonts
         // as you can see at runtime, the font file name doesn't seem to be the right thing to use, but SwiftGen will help us fix that.
@@ -81,7 +81,7 @@ extension DetailViewController: UITableViewDataSource {
         cell.textLabel?.text = label
         // FIXME: swiftgen assets
         cell.textLabel?.textColor = UIColor(named: "Colors/title")
-        // FIXME: swiftgen fonts
+        // FIXME: swiftgen fonts – Note how this font isn't even loading right now
         cell.textLabel?.font = UIFont(name: "SFDistantGalaxyAlternate", size: 12)
         cell.textLabel?.numberOfLines = 2
 
@@ -94,7 +94,7 @@ extension DetailViewController: UITableViewDataSource {
         }
         // FIXME: swiftgen assets
         cell.detailTextLabel?.textColor = UIColor(named: "Colors/text")
-        // FIXME: swiftgen fonts
+        // FIXME: swiftgen fonts – Note how this font isn't even loading right now
         cell.detailTextLabel?.font = UIFont(name: "SFDistantGalaxyAlternate", size: 17)
 
         return cell
