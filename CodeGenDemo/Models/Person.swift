@@ -23,8 +23,6 @@ struct Person: Model, Equatable, Encodable {
 
 extension Person: CustomStringConvertible {
     var description: String {
-        // FIXME: [Stage 1] swiftgen strings
-        let key = NSLocalizedString("person.description", comment: "")
-        return String(format: key, name, height ?? 0, mass ?? 0, films.count)
+        return L10n.Person.description(name, height ?? 0, mass ?? 0, films.count)
     }
 }

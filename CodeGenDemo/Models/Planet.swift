@@ -27,13 +27,10 @@ struct Planet: /* Model, */ Equatable, Encodable {
 
 extension Planet: CustomStringConvertible {
     var description: String {
-        // FIXME: [Stage 1] swiftgen strings
         let residentNames = residents.isEmpty
-            ? NSLocalizedString("planet.description.noResident", comment: "")
+            ? L10n.Planet.Description.noResident
             : residents.map({ id in id.displayName ?? "?" }).joined(separator: ", ")
 
-        // FIXME: [Stage 1] swiftgen strings
-        let key = NSLocalizedString("planet.description", comment: "")
-        return String(format: key, name, films.count, residentNames)
+        return L10n.Planet.description(name, films.count, residentNames)
     }
 }

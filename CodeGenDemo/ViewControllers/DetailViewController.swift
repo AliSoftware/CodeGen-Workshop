@@ -22,8 +22,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // FIXME: [Stage 1] swiftgen strings – whoops, wrong key
-        self.title = NSLocalizedString("details.title", comment: "")
+        self.title = L10n.Detail.title
 
         descriptionTextView.font = FontFamily.SFDistantGalaxyAlternate.italic.font(size: 14)
         
@@ -71,8 +70,7 @@ extension DetailViewController: UITableViewDataSource {
         guard let item = item else { return UITableViewCell() }
 
         let field = item.allFields[indexPath.row]
-        // FIXME: [Stage 1] Fields will now use the L10n pre-translated constants, no need to translate them anymore
-        let label = NSLocalizedString(field.key, comment: "")
+        let label = field.key
         let value = field.value
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "FieldCell", for: indexPath)

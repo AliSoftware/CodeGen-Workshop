@@ -15,7 +15,12 @@ fonts:
     - templateName: "swift4"
       output: "Fonts.swift"
 
-# TODO: strings
+strings:
+  inputs:
+    - "CodeGenDemo/Resources/en.lproj/"
+  outputs:
+    - templateName: "structured-swift4"
+      output: "Strings.swift"
 
 ib:
   inputs:

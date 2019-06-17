@@ -26,8 +26,6 @@ struct Ship: Model, Equatable, Encodable {
 
 extension Ship: CustomStringConvertible {
     var description: String {
-        // FIXME: [Stage 1] swiftgen strings
-        let key = NSLocalizedString("ship.description", comment: "")
-        return String(format: key, name, model, crew ?? 0, passengers ?? 0, length ?? 0.0)
+        return L10n.Ship.description(name, model, crew ?? 0, passengers ?? 0, length ?? 0)
     }
 }

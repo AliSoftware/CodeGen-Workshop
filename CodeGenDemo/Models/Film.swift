@@ -24,8 +24,6 @@ struct Film: Model, Equatable, Encodable {
 
 extension Film: CustomStringConvertible {
     var description: String {
-        // FIXME: [Stage 1] swiftgen strings
-        let key = NSLocalizedString("film.description", comment: "")
-        return String(format: key, title, episodeID, releaseDate)
+        return L10n.Film.description(title, episodeID, releaseDate)
     }
 }

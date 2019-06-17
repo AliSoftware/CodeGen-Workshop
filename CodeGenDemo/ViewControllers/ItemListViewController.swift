@@ -14,15 +14,13 @@ class ItemListViewController: UIViewController {
     var items: [Item] = ItemStore.shared.items
 
     override func viewDidLoad() {
-        // FIXME: [Stage 1] swiftgen strings
-        self.title = NSLocalizedString("list.title", comment: "")
+        self.title = L10n.List.title
 
         // Configure the segments
         self.segmentedControl?.removeAllSegments()
         for (index, filter) in ItemStore.filters.enumerated() {
             self.segmentedControl?.insertSegment(
-                // FIXME: [Stage 1] swiftgen strings: Once the key is pre-translated, don't need to translate it anymore.
-                withTitle: NSLocalizedString(filter.key, comment: ""),
+                withTitle: filter.key,
                 at: index,
                 animated: false
             )

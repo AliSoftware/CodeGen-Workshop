@@ -18,9 +18,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // FIXME: [Stage 1] swiftgen strings
-        let welcomeText = String(
-            format: NSLocalizedString("welcome", comment: ""),
+        let welcomeText = L10n.welcome(
             // FIXME: [Stage 1] swiftgen plist
             Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
         )
