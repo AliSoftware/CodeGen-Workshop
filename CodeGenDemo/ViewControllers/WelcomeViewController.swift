@@ -18,10 +18,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let welcomeText = L10n.welcome(
-            // FIXME: [Stage 1] swiftgen plist
-            Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
-        )
+        let welcomeText = L10n.welcome(InfoPlist.cfBundleName)
         titleLabel.text = welcomeText
         titleLabel.textColor = Asset.Colors.star.color
 

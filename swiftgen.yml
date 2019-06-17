@@ -29,7 +29,14 @@ ib:
     - templateName: "scenes-swift4"
       output: "Storyboards.swift"
 
-# TODO: plist (Info.plist)
+plist:
+  inputs:
+    - "CodeGenDemo/Resources/Info.plist"
+  outputs:
+    - templateName: "runtime-swift4"
+      output: "InfoPlist.swift"
+      params:
+        enumName: InfoPlist
 
 # TODO: json (Lottie)
 

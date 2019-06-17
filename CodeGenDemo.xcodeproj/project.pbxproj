@@ -15,6 +15,7 @@
 		3847590122B9647500C83467 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB4F6422B805A700C0FC7A /* Fonts.swift */; };
 		3847590322B965A700C83467 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB4F6822B80C1800C0FC7A /* Storyboards.swift */; };
 		3847590422B965CD00C83467 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB4F6B22B80DE900C0FC7A /* Strings.swift */; };
+		3847590522B9661B00C83467 /* InfoPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB4F6E22B8161800C0FC7A /* InfoPlist.swift */; };
 		385D00D622AD43CC00319703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D522AD43CC00319703 /* AppDelegate.swift */; };
 		385D00D822AD43CC00319703 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D722AD43CC00319703 /* ItemListViewController.swift */; };
 		385D00DA22AD43CC00319703 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D922AD43CC00319703 /* DetailViewController.swift */; };
@@ -87,6 +88,7 @@
 		38FB4F6422B805A700C0FC7A /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		38FB4F6822B80C1800C0FC7A /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		38FB4F6B22B80DE900C0FC7A /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		38FB4F6E22B8161800C0FC7A /* InfoPlist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPlist.swift; sourceTree = "<group>"; };
 		71538ACEC10E0E4797366E66 /* Pods_CodeGenDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeGenDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4867AC91C023DA03AC186AF /* Pods-CodeGenDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeGenDemo.release.xcconfig"; path = "Target Support Files/Pods-CodeGenDemo/Pods-CodeGenDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F45CA2F4BD576BC84B855358 /* Pods-CodeGenDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeGenDemo.debug.xcconfig"; path = "Target Support Files/Pods-CodeGenDemo/Pods-CodeGenDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 		385D013A22AD5B9700319703 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				38FB4F6E22B8161800C0FC7A /* InfoPlist.swift */,
 				38FB4F6B22B80DE900C0FC7A /* Strings.swift */,
 				38FB4F6822B80C1800C0FC7A /* Storyboards.swift */,
 				38FB4F6422B805A700C0FC7A /* Fonts.swift */,
@@ -395,6 +398,7 @@
 				385D015022AD5F8000319703 /* Ship.swift in Sources */,
 				385D012C22AD519E00319703 /* WelcomeViewController.swift in Sources */,
 				385D015522AD79AD00319703 /* Item+Fields.swift in Sources */,
+				3847590522B9661B00C83467 /* InfoPlist.swift in Sources */,
 				3842FAD822B3F6B2006CDE8F /* Item.swift in Sources */,
 				384758FE22B961B500C83467 /* Assets.swift in Sources */,
 				3847590322B965A700C83467 /* Storyboards.swift in Sources */,
