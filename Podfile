@@ -6,4 +6,5 @@ target 'CodeGenDemo' do
   use_frameworks!
 
   pod 'lottie-ios'
+  pod 'SwiftGen'
 end
