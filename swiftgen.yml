@@ -17,7 +17,12 @@ fonts:
 
 # TODO: strings
 
-# TODO: ib (Storyboards and Scenes)
+ib:
+  inputs:
+    - "CodeGenDemo/"
+  outputs:
+    - templateName: "scenes-swift4"
+      output: "Storyboards.swift"
 
 # TODO: plist (Info.plist)
 

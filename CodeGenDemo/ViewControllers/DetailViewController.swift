@@ -101,8 +101,7 @@ extension DetailViewController: UITableViewDelegate {
         guard let item = item else { return }
 
         if let childItems = item.allFields[indexPath.row].value as? [Item] {
-            // FIXME: [Stage 1] swiftgen ib
-            let vc = UIStoryboard(name: "ItemList", bundle: nil).instantiateViewController(withIdentifier: "List") as! ItemListViewController
+            let vc = StoryboardScene.ItemList.list.instantiate()
             vc.items = childItems
             self.navigationController?.pushViewController(vc, animated: true)
         }

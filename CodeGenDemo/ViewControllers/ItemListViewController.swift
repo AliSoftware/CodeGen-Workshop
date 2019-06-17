@@ -39,9 +39,7 @@ class ItemListViewController: UIViewController {
 
     @IBAction
     private func presentWelcomeScreen() {
-        // FIXME: [Stage 1] swiftgen storyboards
-        let welcomeStoryboard = UIStoryboard(name: "Welcome", bundle: nil)
-        let welcomeVC = welcomeStoryboard.instantiateInitialViewController() as! WelcomeViewController
+        let welcomeVC = StoryboardScene.Welcome.initialScene.instantiate()
         welcomeVC.modalTransitionStyle = .flipHorizontal
 
         self.present(welcomeVC, animated:true)
@@ -83,9 +81,7 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // FIXME: [Stage 1] swiftgen storyboards – Fix the crash
-        let detailStoryboard = UIStoryboard(name: "ItemsList", bundle: nil) // Whoops, crash
-        let detailVC = detailStoryboard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController // crash again
+        let detailVC = StoryboardScene.ItemList.details.instantiate()
         detailVC.item = items[indexPath.row]
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
