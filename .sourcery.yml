@@ -1,0 +1,8 @@
+sources:
+  - CodeGenDemo
+templates:
+  - Templates/
+output:
+  CodeGenDemo/Generated
+# args:
+#   <name>: <value>

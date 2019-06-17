@@ -8,3 +8,6 @@
 protocol Model: CustomStringConvertible {
     var id: Int { get }
 }
+
+// Marker Protocol for Sourcery
+protocol AutoEquatable {}

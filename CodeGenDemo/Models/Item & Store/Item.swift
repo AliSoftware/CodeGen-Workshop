@@ -9,7 +9,7 @@ import UIKit
 
 // FIXME: [Stage 3] sourcery - make it AutoEquatable
 // FIXME: [Stage 4] sourcery – generate this enum based on types conforming to Model
-enum Item {
+enum Item: AutoEquatable {
     case ship(Ship)
     case person(Person)
     case film(Film)
