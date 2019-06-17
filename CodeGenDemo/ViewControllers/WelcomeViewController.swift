@@ -28,11 +28,8 @@ class WelcomeViewController: UIViewController {
     }
 
     private func setupAnimationView() {
-        // FIXME: [Stage 2] swiftgen json (custom template for Lottie)
-        let possibleAnimations = ["bb8", "lightsaber", "rocket"]
-
-        guard let animationName = possibleAnimations.randomElement() else { return }
-        let animationView = AnimationView(name: animationName)
+        guard let anim = Lottie.allCases.randomElement() else { return }
+        let animationView = anim.makeView()
         animationView.embed(in: animationContainer)
         
         animationView.play { [weak self] finished in

@@ -1,3 +1,13 @@
-{% for file in files %}
-// {{ file.name }}
-{% endfor %}
+import Lottie
+
+enum Lottie: String, CaseIterable {
+  {% for file in files %}
+  // {{ file.documents.first.data.w }}x{{ file.documents.first.data.h }}
+  case {{ file.name }} = "{{file.name}}"
+
+  {% endfor %}
+
+  func makeView() -> AnimationView {
+    return AnimationView(name: self.rawValue)
+  }
+}
