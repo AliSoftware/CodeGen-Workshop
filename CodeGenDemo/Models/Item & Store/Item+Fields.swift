@@ -13,7 +13,9 @@ private func string<T>(_ value: T?) -> String {
 }
 
 extension Item {
-    // FIXME: sourcery, loop over every property of each case
+    // FIXME: [Stage 1] swiftgen strings
+    // FIXME: [Stage 5] sourcery, loop over every property of each case
+    // FIXME: [Stage 6] use `person.homeworld.displayName ?? "?"` for `"person.homeworld"`
     var allFields: KeyValuePairs<String, Any> {
         switch self {
         case .ship(let ship):
@@ -25,7 +27,7 @@ extension Item {
             return [
                 "person.name": person.name,
                 "person.height": string(person.height), // when it's not a string, this helper transforms it nicely
-                "person.homeworld": person.homeworld.displayName ?? "?", // when it's a ID<T>, .displayName gets a string to display
+                "person.homeworld": string(person.homeworld),
                 "person.starships": person.starships.compactMap { $0.item() }, // when it's an `[ID<T>]`, transform it to an `[Item]`
                 "person.films": person.films.compactMap { $0.item() } // when it's an `[ID<T>]`, transform it to an `[Item]`
             ]

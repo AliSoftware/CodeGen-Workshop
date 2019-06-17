@@ -10,7 +10,7 @@ import Foundation
 // FIXME: [Stage 2] swiftgen – Add all Planets from yaml and generate ItemStore+Planets.swft
 // FIXME: [Stage 6] sourcery – make Planet conform to Model: See it be added everywhere automatically thanks to Sourcery
 // FIXME: [Stage 7] sourcery custom encodable
-struct Planet: Model, Equatable, Encodable {
+struct Planet: /* Model, */ Equatable, Encodable {
     let id: Int
     let name: String
     let rotationPeriod: Int?
@@ -27,12 +27,12 @@ struct Planet: Model, Equatable, Encodable {
 
 extension Planet: CustomStringConvertible {
     var description: String {
-        // FIXME: swiftgen strings
+        // FIXME: [Stage 1] swiftgen strings
         let residentNames = residents.isEmpty
             ? NSLocalizedString("planet.description.noResident", comment: "")
             : residents.map({ id in id.displayName ?? "?" }).joined(separator: ", ")
 
-        // FIXME: swiftgen strings
+        // FIXME: [Stage 1] swiftgen strings
         let key = NSLocalizedString("planet.description", comment: "")
         return String(format: key, name, films.count, residentNames)
     }

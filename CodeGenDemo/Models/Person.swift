@@ -7,7 +7,7 @@
 
 import Foundation
 
-// FIXME: sourcery custom encodable
+// FIXME: [Stage 7] sourcery custom encodable
 struct Person: Model, Equatable, Encodable {
     let id: Int
     let name: String
@@ -16,14 +16,14 @@ struct Person: Model, Equatable, Encodable {
     let hairColor: String
     let skinColor: String
     let eyeColor: String
-    let homeworld: ID<Planet>
+    let homeworld: Int // FIXME: [Stage 6] – Change to ID<Planet>
     let films: [ID<Film>]
     let starships: [ID<Ship>]
 }
 
 extension Person: CustomStringConvertible {
     var description: String {
-        // FIXME: swiftgen strings
+        // FIXME: [Stage 1] swiftgen strings
         let key = NSLocalizedString("person.description", comment: "")
         return String(format: key, name, height ?? 0, mass ?? 0, films.count)
     }

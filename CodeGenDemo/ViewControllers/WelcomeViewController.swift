@@ -18,24 +18,24 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // FIXME: swiftgen strings
+        // FIXME: [Stage 1] swiftgen strings
         let welcomeText = String(
             format: NSLocalizedString("welcome", comment: ""),
-            // FIXME: swiftgen plist
+            // FIXME: [Stage 1] swiftgen plist
             Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
         )
         titleLabel.text = welcomeText
-        // FIXME: swiftgen assets
+        // FIXME: [Stage 1] swiftgen assets
         titleLabel.textColor = UIColor(named: "Colors/star")
 
-        // FIXME: swiftgen fonts –
+        // FIXME: [Stage 1] swiftgen fonts
         // titleLabel.font = ?? Font from "SFDistantGalaxy-Outline.ttf", size 36
 
         setupAnimationView()
     }
 
     private func setupAnimationView() {
-        // FIXME: swiftgen json (custom template for Lottie)
+        // FIXME: [Stage 2] swiftgen json (custom template for Lottie)
         let possibleAnimations = ["bb8", "lightsaber", "rocket"]
 
         guard let animationName = possibleAnimations.randomElement() else { return }

@@ -14,13 +14,14 @@ class ItemListViewController: UIViewController {
     var items: [Item] = ItemStore.shared.items
 
     override func viewDidLoad() {
-        // FIXME: swiftgen strings
+        // FIXME: [Stage 1] swiftgen strings
         self.title = NSLocalizedString("list.title", comment: "")
 
         // Configure the segments
         self.segmentedControl?.removeAllSegments()
         for (index, filter) in ItemStore.filters.enumerated() {
             self.segmentedControl?.insertSegment(
+                // FIXME: [Stage 1] swiftgen strings: Once the key is pre-translated, don't need to translate it anymore.
                 withTitle: NSLocalizedString(filter.key, comment: ""),
                 at: index,
                 animated: false
@@ -38,7 +39,7 @@ class ItemListViewController: UIViewController {
 
     @IBAction
     private func presentWelcomeScreen() {
-        // FIXME: swiftgen storyboards
+        // FIXME: [Stage 1] swiftgen storyboards
         let welcomeStoryboard = UIStoryboard(name: "Welcome", bundle: nil)
         let welcomeVC = welcomeStoryboard.instantiateInitialViewController() as! WelcomeViewController
         welcomeVC.modalTransitionStyle = .flipHorizontal
@@ -70,9 +71,9 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
         let item = items[indexPath.row]
         cell.imageView?.image = item.image
         cell.textLabel?.text = item.name
-        // FIXME: swiftgen assets
+        // FIXME: [Stage 1] swiftgen assets
         cell.textLabel?.textColor = UIColor(named: "Colors/text")
-        // FIXME: swiftgen fonts
+        // FIXME: [Stage 1] swiftgen fonts
         cell.textLabel?.font = UIFont(name: "SFDistantGalaxy", size: 17)
         return cell
     }
@@ -84,7 +85,7 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // FIXME: swiftgen storyboards – Fix the crash
+        // FIXME: [Stage 1] swiftgen storyboards – Fix the crash
         let detailStoryboard = UIStoryboard(name: "ItemsList", bundle: nil) // Whoops, crash
         let detailVC = detailStoryboard.instantiateViewController(withIdentifier: "Detail") as! DetailViewController // crash again
         detailVC.item = items[indexPath.row]

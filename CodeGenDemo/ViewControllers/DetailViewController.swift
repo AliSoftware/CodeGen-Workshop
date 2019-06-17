@@ -22,10 +22,10 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // FIXME: swiftgen strings – whoops, wrong key
+        // FIXME: [Stage 1] swiftgen strings – whoops, wrong key
         self.title = NSLocalizedString("details.title", comment: "")
 
-        // FIXME: swiftgen fonts
+        // FIXME: [Stage 1] swiftgen fonts
         // as you can see at runtime, the font file name doesn't seem to be the right thing to use, but SwiftGen will help us fix that.
         descriptionTextView.font = UIFont(name: "SFDistantGalaxyAlternate-Italic", size: 14)
         
@@ -73,15 +73,16 @@ extension DetailViewController: UITableViewDataSource {
         guard let item = item else { return UITableViewCell() }
 
         let field = item.allFields[indexPath.row]
+        // FIXME: [Stage 1] Fields will now use the L10n pre-translated constants, no need to translate them anymore
         let label = NSLocalizedString(field.key, comment: "")
         let value = field.value
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "FieldCell", for: indexPath)
 
         cell.textLabel?.text = label
-        // FIXME: swiftgen assets
+        // FIXME: [Stage 1] swiftgen assets
         cell.textLabel?.textColor = UIColor(named: "Colors/title")
-        // FIXME: swiftgen fonts – Note how this font isn't even loading right now
+        // FIXME: [Stage 1] swiftgen fonts – Note how this font isn't even loading right now
         cell.textLabel?.font = UIFont(name: "SFDistantGalaxyAlternate", size: 12)
         cell.textLabel?.numberOfLines = 2
 
@@ -92,9 +93,9 @@ extension DetailViewController: UITableViewDataSource {
             cell.detailTextLabel?.text = String(describing: value)
             cell.accessoryType = .none
         }
-        // FIXME: swiftgen assets
+        // FIXME: [Stage 1] swiftgen assets
         cell.detailTextLabel?.textColor = UIColor(named: "Colors/text")
-        // FIXME: swiftgen fonts – Note how this font isn't even loading right now
+        // FIXME: [Stage 1] swiftgen fonts – Note how this font isn't even loading right now
         cell.detailTextLabel?.font = UIFont(name: "SFDistantGalaxyAlternate", size: 17)
 
         return cell
@@ -106,7 +107,7 @@ extension DetailViewController: UITableViewDelegate {
         guard let item = item else { return }
 
         if let childItems = item.allFields[indexPath.row].value as? [Item] {
-            // FIXME: swiftgen ib
+            // FIXME: [Stage 1] swiftgen ib
             let vc = UIStoryboard(name: "ItemList", bundle: nil).instantiateViewController(withIdentifier: "List") as! ItemListViewController
             vc.items = childItems
             self.navigationController?.pushViewController(vc, animated: true)

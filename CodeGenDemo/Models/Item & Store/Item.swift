@@ -7,28 +7,31 @@
 
 import UIKit
 
-// FIXME: sourcery - make it AutoEquatable
+// FIXME: [Stage 3] sourcery - make it AutoEquatable
+// FIXME: [Stage 4] sourcery – generate this enum based on types conforming to Model
 enum Item {
     case ship(Ship)
     case person(Person)
     case film(Film)
 }
 
-// FIXME: sourcery – generate the SwiftGen image constant from the item case name
+// FIXME: [Stage 4] sourcery – generate the SwiftGen image constant from the item case name
 extension Item {
     var image: UIImage {
         switch self {
         case .ship:
             return UIImage(named: "items/ship")!
         case .person:
-            return UIImage(named: "items/person")! // FIXME: crash here. Solve using swiftgen
+            // FIXME: [Stage 1] crash here. Solve using swiftgen
+            return UIImage(named: "items/person")!
         case .film:
-            return UIImage(named: "items/movie")! // FIXME: crash here. Solve using swiftgen
+            // FIXME: [Stage 1] crash here. Solve using swiftgen
+            return UIImage(named: "items/movie")!
         }
     }
 }
 
-// FIXME: sourcery – generate this enum, looping on all cases
+// FIXME: [Stage 4] sourcery – generate this enum, looping on all cases
 extension Item: CustomStringConvertible {
     var description: String {
         switch self {
@@ -42,7 +45,7 @@ extension Item: CustomStringConvertible {
     }
 }
 
-// FIXME: sourcery, use custom annotation to identify the name property
+// FIXME: [Stage 4] sourcery, use custom annotation to identify the name property
 extension Item {
     var name: String {
         switch self {
@@ -57,7 +60,7 @@ extension Item {
 }
 
 
-// FIXME: sourcery – generate that Encodable implementation
+// FIXME: [Stage 4] sourcery – generate that Encodable implementation
 extension Item: Encodable {
     enum CodingKeys: CodingKey {
         case type, item

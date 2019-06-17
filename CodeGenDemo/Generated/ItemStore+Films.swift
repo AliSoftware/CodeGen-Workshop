@@ -1,3 +1,5 @@
+// FIXME: [Stage 2] swiftgen – Make Custom to create those from YAML
+
 extension ItemStore {
   static let films: [Film] = [
     Film(

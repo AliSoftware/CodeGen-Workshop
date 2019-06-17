@@ -7,7 +7,7 @@
 
 import Foundation
 
-// FIXME: sourcery custom encodable
+// FIXME: [Stage 7] sourcery custom encodable
 struct Ship: Model, Equatable, Encodable {
     let id: Int
     let name: String
@@ -26,7 +26,7 @@ struct Ship: Model, Equatable, Encodable {
 
 extension Ship: CustomStringConvertible {
     var description: String {
-        // FIXME: swiftgen strings
+        // FIXME: [Stage 1] swiftgen strings
         let key = NSLocalizedString("ship.description", comment: "")
         return String(format: key, name, model, crew ?? 0, passengers ?? 0, length ?? 0.0)
     }

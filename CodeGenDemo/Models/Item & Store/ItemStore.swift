@@ -7,7 +7,7 @@
 
 import Foundation
 
-// FIXME: sourcery – generate from all Models
+// FIXME: [Stage 5] sourcery – generate from all Models
 
 class ItemStore {
   // Singletons are bad. Kids, don't do this at home (But hey, this is just a demo)
@@ -24,7 +24,7 @@ class ItemStore {
   }
 }
 
-// FIXME: sourcery – Generate all subscripts
+// FIXME: [Stage 5] sourcery – Generate all subscripts
 extension ItemStore {
   subscript(id: ID<Person>) -> Person? {
     for case .person(let person) in self.items where person.id == id.id {
@@ -48,10 +48,10 @@ extension ItemStore {
   }
 }
 
-// FIXME: sourcery – Generate all filters based on list of types conforming to Model
+// FIXME: [Stage 5] sourcery – Generate all filters based on list of types conforming to Model
 extension ItemStore {
   static let filters: KeyValuePairs<String, (Item) -> Bool> = [
-    // FIXME: swiftgen strings
+    // FIXME: [Stage 1] swiftgen strings
     "filters.all": { _ in true },
     "filters.ships": { guard case .ship = $0 else { return false }; return true },
     "filters.persons": { guard case .person = $0 else { return false }; return true },

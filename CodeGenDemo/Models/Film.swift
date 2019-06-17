@@ -7,7 +7,7 @@
 
 import Foundation
 
-// FIXME: [Stage 6] rename and see Sourcery's magic
+// FIXME: [Stage 7] rename and see Sourcery's magic
 // FIXME: [Stage 7] sourcery custom encodable
 struct Film: Model, Equatable, Encodable {
     let id: Int
@@ -18,13 +18,13 @@ struct Film: Model, Equatable, Encodable {
     let producer: String
     let releaseDate: String
     let characters: [ID<Person>]
-    let planets: [ID<Planet>]
+    let planets: [Int] // FIXME: [Stage 6] – Change to [ID<Planet>] 
     let starships: [ID<Ship>]
 }
 
 extension Film: CustomStringConvertible {
     var description: String {
-        // FIXME: swiftgen strings
+        // FIXME: [Stage 1] swiftgen strings
         let key = NSLocalizedString("film.description", comment: "")
         return String(format: key, title, episodeID, releaseDate)
     }

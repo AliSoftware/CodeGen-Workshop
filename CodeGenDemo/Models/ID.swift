@@ -12,7 +12,7 @@ struct ID<T: Model>: Equatable {
 }
 
 extension ID {
-    // FIXME: sourcery – Generate this switch
+    // FIXME: [Stage 4] sourcery – Generate this switch
     func item() -> Item? {
         switch self {
         case let id as ID<Ship>:
