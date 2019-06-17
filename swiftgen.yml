@@ -38,6 +38,12 @@ plist:
       params:
         enumName: InfoPlist
 
-# TODO: json (Lottie)
+# Lottie
+json:
+  inputs:
+    - "CodeGenDemo/Resources/Lottie"
+  outputs:
+    - templatePath: "CodeGenDemo/Resources/Lottie/lottie.stencil"
+      output: "Lottie.swift"
 
 # TODO: yaml
