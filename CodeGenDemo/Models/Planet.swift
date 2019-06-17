@@ -7,7 +7,6 @@
 
 import Foundation
 
-// FIXME: [Stage 2] swiftgen – Add all Planets from yaml and generate ItemStore+Planets.swft
 // FIXME: [Stage 6] sourcery – make Planet conform to Model: See it be added everywhere automatically thanks to Sourcery
 // FIXME: [Stage 7] sourcery custom encodable
 struct Planet: /* Model, */ Equatable, Encodable {
