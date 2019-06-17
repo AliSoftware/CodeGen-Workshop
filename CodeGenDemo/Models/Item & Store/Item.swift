@@ -20,13 +20,11 @@ extension Item {
     var image: UIImage {
         switch self {
         case .ship:
-            return UIImage(named: "items/ship")!
+            return Asset.Items.ship.image
         case .person:
-            // FIXME: [Stage 1] crash here. Solve using swiftgen
-            return UIImage(named: "items/person")!
+            return Asset.Items.person.image
         case .film:
-            // FIXME: [Stage 1] crash here. Solve using swiftgen
-            return UIImage(named: "items/movie")!
+            return Asset.Items.film.image
         }
     }
 }

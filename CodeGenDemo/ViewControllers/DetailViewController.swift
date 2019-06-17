@@ -80,8 +80,7 @@ extension DetailViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FieldCell", for: indexPath)
 
         cell.textLabel?.text = label
-        // FIXME: [Stage 1] swiftgen assets
-        cell.textLabel?.textColor = UIColor(named: "Colors/title")
+        cell.textLabel?.textColor = Asset.Colors.title.color
         // FIXME: [Stage 1] swiftgen fonts – Note how this font isn't even loading right now
         cell.textLabel?.font = UIFont(name: "SFDistantGalaxyAlternate", size: 12)
         cell.textLabel?.numberOfLines = 2
@@ -93,8 +92,7 @@ extension DetailViewController: UITableViewDataSource {
             cell.detailTextLabel?.text = String(describing: value)
             cell.accessoryType = .none
         }
-        // FIXME: [Stage 1] swiftgen assets
-        cell.detailTextLabel?.textColor = UIColor(named: "Colors/text")
+        cell.detailTextLabel?.textColor = Asset.Colors.text.color
         // FIXME: [Stage 1] swiftgen fonts – Note how this font isn't even loading right now
         cell.detailTextLabel?.font = UIFont(name: "SFDistantGalaxyAlternate", size: 17)
 

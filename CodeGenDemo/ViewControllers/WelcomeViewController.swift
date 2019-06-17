@@ -25,8 +25,7 @@ class WelcomeViewController: UIViewController {
             Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
         )
         titleLabel.text = welcomeText
-        // FIXME: [Stage 1] swiftgen assets
-        titleLabel.textColor = UIColor(named: "Colors/star")
+        titleLabel.textColor = Asset.Colors.star.color
 
         // FIXME: [Stage 1] swiftgen fonts
         // titleLabel.font = ?? Font from "SFDistantGalaxy-Outline.ttf", size 36

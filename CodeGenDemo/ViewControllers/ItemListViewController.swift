@@ -71,8 +71,7 @@ extension ItemListViewController: UITableViewDelegate, UITableViewDataSource {
         let item = items[indexPath.row]
         cell.imageView?.image = item.image
         cell.textLabel?.text = item.name
-        // FIXME: [Stage 1] swiftgen assets
-        cell.textLabel?.textColor = UIColor(named: "Colors/text")
+        cell.textLabel?.textColor = Asset.Colors.text.color
         // FIXME: [Stage 1] swiftgen fonts
         cell.textLabel?.font = UIFont(name: "SFDistantGalaxy", size: 17)
         return cell

@@ -1,0 +1,21 @@
+# input_dir: .
+output_dir: CodeGenDemo/Generated/
+
+xcassets:
+  inputs:
+    - "CodeGenDemo/Resources/Assets.xcassets"
+  outputs:
+    - templateName: "swift4"
+      output: "Assets.swift"
+
+# TODO: fonts
+
+# TODO: strings
+
+# TODO: ib (Storyboards and Scenes)
+
+# TODO: plist (Info.plist)
+
+# TODO: json (Lottie)
+
+# TODO: yaml
