@@ -12,6 +12,7 @@
 		3842FAD622B3EF5A006CDE8F /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842FAD522B3EF5A006CDE8F /* Film.swift */; };
 		3842FAD822B3F6B2006CDE8F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3842FAD722B3F6B2006CDE8F /* Item.swift */; };
 		384758FE22B961B500C83467 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB4F5E22B7FF4A00C0FC7A /* Assets.swift */; };
+		3847590122B9647500C83467 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB4F6422B805A700C0FC7A /* Fonts.swift */; };
 		385D00D622AD43CC00319703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D522AD43CC00319703 /* AppDelegate.swift */; };
 		385D00D822AD43CC00319703 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D722AD43CC00319703 /* ItemListViewController.swift */; };
 		385D00DA22AD43CC00319703 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D922AD43CC00319703 /* DetailViewController.swift */; };
@@ -81,6 +82,7 @@
 		38FB4F5922B5D11D00C0FC7A /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		38FB4F5B22B7E8F700C0FC7A /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
 		38FB4F5E22B7FF4A00C0FC7A /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		38FB4F6422B805A700C0FC7A /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		71538ACEC10E0E4797366E66 /* Pods_CodeGenDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeGenDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4867AC91C023DA03AC186AF /* Pods-CodeGenDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeGenDemo.release.xcconfig"; path = "Target Support Files/Pods-CodeGenDemo/Pods-CodeGenDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F45CA2F4BD576BC84B855358 /* Pods-CodeGenDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeGenDemo.debug.xcconfig"; path = "Target Support Files/Pods-CodeGenDemo/Pods-CodeGenDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		385D013A22AD5B9700319703 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				38FB4F6422B805A700C0FC7A /* Fonts.swift */,
 				38FB4F5E22B7FF4A00C0FC7A /* Assets.swift */,
 				38A926CD22B466570043713F /* ItemStore+People.swift */,
 				38A926CC22B466570043713F /* ItemStore+Ships.swift */,
@@ -396,6 +399,7 @@
 				385D015322AD687F00319703 /* ItemStore.swift in Sources */,
 				38A926CF22B466570043713F /* ItemStore+People.swift in Sources */,
 				3842FAD622B3EF5A006CDE8F /* Film.swift in Sources */,
+				3847590122B9647500C83467 /* Fonts.swift in Sources */,
 				3842FAD422B3EF2A006CDE8F /* Planet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

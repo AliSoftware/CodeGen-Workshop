@@ -27,8 +27,7 @@ class WelcomeViewController: UIViewController {
         titleLabel.text = welcomeText
         titleLabel.textColor = Asset.Colors.star.color
 
-        // FIXME: [Stage 1] swiftgen fonts
-        // titleLabel.font = ?? Font from "SFDistantGalaxy-Outline.ttf", size 36
+        titleLabel.font = FontFamily.SFDistantGalaxyOutline.regular.font(size: 36)
 
         setupAnimationView()
     }

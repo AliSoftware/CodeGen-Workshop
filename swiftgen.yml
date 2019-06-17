@@ -8,7 +8,12 @@ xcassets:
     - templateName: "swift4"
       output: "Assets.swift"
 
-# TODO: fonts
+fonts:
+  inputs:
+    - "CodeGenDemo/Resources/Fonts/"
+  outputs:
+    - templateName: "swift4"
+      output: "Fonts.swift"
 
 # TODO: strings
 
