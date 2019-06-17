@@ -7,4 +7,5 @@ target 'CodeGenDemo' do
 
   pod 'lottie-ios'
   pod 'SwiftGen'
+  pod 'Sourcery'
 end
