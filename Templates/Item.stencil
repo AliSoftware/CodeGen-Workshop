@@ -38,3 +38,19 @@ extension Item {
         }
     }
 }
+
+extension Item: Encodable {
+    enum CodingKeys: CodingKey {
+        case type, item
+    }
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        switch self {
+        {% for type in types.implementing.Model %}
+        case .{{type.name|lowercase}}(let {{type.name|lowercase}}):
+            try container.encode("{{type.name|lowercase}}", forKey: .type)
+            try container.encode({{type.name|lowercase}}, forKey: .item)
+        {% endfor %}
+        }
+    }
+}
