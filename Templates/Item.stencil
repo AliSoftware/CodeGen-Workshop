@@ -1,0 +1,5 @@
+// All Models...
+
+{% for type in types.implementing.Model %}
+// - Model type: {{type.name}}
+{% endfor %}
