@@ -29,6 +29,8 @@ internal enum Asset {
   internal enum Items {
 
     internal static let film = ImageAsset(name: "items/film")
+    internal static let person = ImageAsset(name: "items/person")
+    internal static let planet = ImageAsset(name: "items/planet")
     internal static let ship = ImageAsset(name: "items/ship")
   }
 }
