@@ -17,6 +17,7 @@
 		3847590422B965CD00C83467 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB4F6B22B80DE900C0FC7A /* Strings.swift */; };
 		3847590522B9661B00C83467 /* InfoPlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB4F6E22B8161800C0FC7A /* InfoPlist.swift */; };
 		3847590622B9664700C83467 /* Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB4F7222B81CB200C0FC7A /* Lottie.swift */; };
+		3847590722B966D600C83467 /* Item.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384758F422B86BE700C83467 /* Item.generated.swift */; };
 		385D00D622AD43CC00319703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D522AD43CC00319703 /* AppDelegate.swift */; };
 		385D00D822AD43CC00319703 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D722AD43CC00319703 /* ItemListViewController.swift */; };
 		385D00DA22AD43CC00319703 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D922AD43CC00319703 /* DetailViewController.swift */; };
@@ -55,6 +56,7 @@
 		3842FAD322B3EF2A006CDE8F /* Planet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Planet.swift; sourceTree = "<group>"; };
 		3842FAD522B3EF5A006CDE8F /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		3842FAD722B3F6B2006CDE8F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		384758F422B86BE700C83467 /* Item.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.generated.swift; sourceTree = "<group>"; };
 		385D00D222AD43CC00319703 /* CodeGenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeGenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		385D00D522AD43CC00319703 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		385D00D722AD43CC00319703 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		385D013A22AD5B9700319703 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				384758F422B86BE700C83467 /* Item.generated.swift */,
 				38DB871C22B8603B0060FB9F /* AutoEquatable.generated.swift */,
 				38FB4F7222B81CB200C0FC7A /* Lottie.swift */,
 				38FB4F6E22B8161800C0FC7A /* InfoPlist.swift */,
@@ -427,6 +430,7 @@
 				385D015022AD5F8000319703 /* Ship.swift in Sources */,
 				385D012C22AD519E00319703 /* WelcomeViewController.swift in Sources */,
 				385D015522AD79AD00319703 /* Item+Fields.swift in Sources */,
+				3847590722B966D600C83467 /* Item.generated.swift in Sources */,
 				3847590522B9661B00C83467 /* InfoPlist.swift in Sources */,
 				3842FAD822B3F6B2006CDE8F /* Item.swift in Sources */,
 				384758FE22B961B500C83467 /* Assets.swift in Sources */,

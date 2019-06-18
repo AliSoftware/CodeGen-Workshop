@@ -76,16 +76,3 @@ func == (lhs: Ship, rhs: Ship) -> Bool {
 }
 
 // MARK: - AutoEquatable for Enums
-// MARK: - Item AutoEquatable
-extension Item: Equatable {}
-func == (lhs: Item, rhs: Item) -> Bool {
-    switch (lhs, rhs) {
-    case (.ship(let lhs), .ship(let rhs)):
-        return lhs == rhs
-    case (.person(let lhs), .person(let rhs)):
-        return lhs == rhs
-    case (.film(let lhs), .film(let rhs)):
-        return lhs == rhs
-    default: return false
-    }
-}

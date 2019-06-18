@@ -1,5 +1,5 @@
-// All Models...
-
+enum Item: AutoEquatable {
 {% for type in types.implementing.Model %}
-// - Model type: {{type.name}}
+    case {{type.name|lowercase}}({{type.name}})
 {% endfor %}
+}

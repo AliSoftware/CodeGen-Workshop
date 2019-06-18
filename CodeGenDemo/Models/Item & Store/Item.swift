@@ -7,13 +7,6 @@
 
 import UIKit
 
-// FIXME: [Stage 4] sourcery – generate this enum based on types conforming to Model
-enum Item: AutoEquatable {
-    case ship(Ship)
-    case person(Person)
-    case film(Film)
-}
-
 // FIXME: [Stage 4] sourcery – generate the SwiftGen image constant from the item case name
 extension Item {
     var image: UIImage {
