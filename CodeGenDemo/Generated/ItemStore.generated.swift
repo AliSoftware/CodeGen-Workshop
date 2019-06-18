@@ -9,7 +9,7 @@ class ItemStore {
 
   private init() {
     self.items = [
-      ItemStore.films.map { .film($0) },
+      ItemStore.movies.map { .movie($0) },
       ItemStore.persons.map { .person($0) },
       ItemStore.planets.map { .planet($0) },
       ItemStore.ships.map { .ship($0) },
@@ -18,8 +18,8 @@ class ItemStore {
 }
 
 extension ItemStore {
-  subscript(id: ID<Film>) -> Film? {
-    for case .film(let object) in self.items where object.id == id.id {
+  subscript(id: ID<Movie>) -> Movie? {
+    for case .movie(let object) in self.items where object.id == id.id {
       return object
     }
     return nil
@@ -47,7 +47,7 @@ extension ItemStore {
 extension ItemStore {
   static let filters: KeyValuePairs<String, (Item) -> Bool> = [
     L10n.Filters.all: { _ in true },
-    L10n.Filters.films: { guard case .film = $0 else { return false }; return true },
+    L10n.Filters.movies: { guard case .movie = $0 else { return false }; return true },
     L10n.Filters.persons: { guard case .person = $0 else { return false }; return true },
     L10n.Filters.planets: { guard case .planet = $0 else { return false }; return true },
     L10n.Filters.ships: { guard case .ship = $0 else { return false }; return true },

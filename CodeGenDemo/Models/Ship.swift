@@ -23,7 +23,7 @@ struct Ship: Model, AutoEquatable, Encodable {
 
     // sourcery:begin:skipEquality
     let pilots: [ID<Person>]
-    let films: [ID<Film>]
+    let films: [ID<Movie>]
     // sourcery:end
 }
 

@@ -7,10 +7,9 @@
 
 import Foundation
 
-// FIXME: [Stage 7] rename and see Sourcery's magic
 // FIXME: [Stage 7] sourcery custom encodable
 // sourcery: nameProperty=title
-struct Film: Model, AutoEquatable, Encodable {
+struct Movie: Model, AutoEquatable, Encodable {
     // sourcery: skipEquality, skipField
     let id: Int
     let episodeID: Int
@@ -28,8 +27,8 @@ struct Film: Model, AutoEquatable, Encodable {
     // sourcery:end
 }
 
-extension Film: CustomStringConvertible {
+extension Movie: CustomStringConvertible {
     var description: String {
-        return L10n.Film.description(title, episodeID, releaseDate)
+        return L10n.Movie.description(title, episodeID, releaseDate)
     }
 }

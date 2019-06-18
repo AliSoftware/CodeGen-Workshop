@@ -21,36 +21,11 @@ internal enum L10n {
     internal static let title = L10n.tr("Localizable", "detail.title")
   }
 
-  internal enum Film {
-    /// Characters
-    internal static let characters = L10n.tr("Localizable", "film.characters")
-    /// %@ is StarWars' episode #%d. It was released in %@.
-    internal static func description(_ p1: String, _ p2: Int, _ p3: String) -> String {
-      return L10n.tr("Localizable", "film.description", p1, p2, p3)
-    }
-    /// Director
-    internal static let director = L10n.tr("Localizable", "film.director")
-    /// Episode #
-    internal static let episodeID = L10n.tr("Localizable", "film.episodeID")
-    /// Opening Crawl
-    internal static let openingCrawl = L10n.tr("Localizable", "film.openingCrawl")
-    /// Planets
-    internal static let planets = L10n.tr("Localizable", "film.planets")
-    /// Producer
-    internal static let producer = L10n.tr("Localizable", "film.producer")
-    /// Release Date
-    internal static let releaseDate = L10n.tr("Localizable", "film.releaseDate")
-    /// Starships
-    internal static let starships = L10n.tr("Localizable", "film.starships")
-    /// Title
-    internal static let title = L10n.tr("Localizable", "film.title")
-  }
-
   internal enum Filters {
     /// All
     internal static let all = L10n.tr("Localizable", "filters.all")
     /// Films
-    internal static let films = L10n.tr("Localizable", "filters.films")
+    internal static let movies = L10n.tr("Localizable", "filters.movies")
     /// Characters
     internal static let persons = L10n.tr("Localizable", "filters.persons")
     /// Planets
@@ -62,6 +37,31 @@ internal enum L10n {
   internal enum List {
     /// StarWars Catalog
     internal static let title = L10n.tr("Localizable", "list.title")
+  }
+
+  internal enum Movie {
+    /// Characters
+    internal static let characters = L10n.tr("Localizable", "movie.characters")
+    /// %@ is StarWars' episode #%d. It was released in %@.
+    internal static func description(_ p1: String, _ p2: Int, _ p3: String) -> String {
+      return L10n.tr("Localizable", "movie.description", p1, p2, p3)
+    }
+    /// Director
+    internal static let director = L10n.tr("Localizable", "movie.director")
+    /// Episode #
+    internal static let episodeID = L10n.tr("Localizable", "movie.episodeID")
+    /// Opening Crawl
+    internal static let openingCrawl = L10n.tr("Localizable", "movie.openingCrawl")
+    /// Planets
+    internal static let planets = L10n.tr("Localizable", "movie.planets")
+    /// Producer
+    internal static let producer = L10n.tr("Localizable", "movie.producer")
+    /// Release Date
+    internal static let releaseDate = L10n.tr("Localizable", "movie.releaseDate")
+    /// Starships
+    internal static let starships = L10n.tr("Localizable", "movie.starships")
+    /// Title
+    internal static let title = L10n.tr("Localizable", "movie.title")
   }
 
   internal enum Person {

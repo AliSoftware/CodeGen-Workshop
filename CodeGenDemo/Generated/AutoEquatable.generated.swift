@@ -24,9 +24,9 @@ fileprivate func compareArrays<T>(lhs: [T], rhs: [T], compare: (_ lhs: T, _ rhs:
 
 
 // MARK: - AutoEquatable for classes, protocols, structs
-// MARK: - Film AutoEquatable
-extension Film: Equatable {}
-func == (lhs: Film, rhs: Film) -> Bool {
+// MARK: - Movie AutoEquatable
+extension Movie: Equatable {}
+func == (lhs: Movie, rhs: Movie) -> Bool {
     guard lhs.episodeID == rhs.episodeID else { return false }
     guard lhs.title == rhs.title else { return false }
     guard lhs.openingCrawl == rhs.openingCrawl else { return false }

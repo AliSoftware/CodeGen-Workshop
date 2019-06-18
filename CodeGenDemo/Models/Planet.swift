@@ -22,7 +22,7 @@ struct Planet: Model, AutoEquatable, Encodable {
     let population: Float?
     // sourcery:begin:skipEquality
     let residents: [ID<Person>]
-    let films: [ID<Film>]
+    let films: [ID<Movie>]
     // sourcery:end
 }
 

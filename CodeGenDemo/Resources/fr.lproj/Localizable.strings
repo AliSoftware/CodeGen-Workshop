@@ -14,7 +14,7 @@
 "filters.ships" = "Vaisseaux";
 "filters.persons" = "Persos";
 "filters.planets" = "Planètes";
-"filters.films" = "Films";
+"filters.movies" = "Films";
 
 // MARK: Ship Fields
 "ship.description" = "Le %@ est un vaisseau de type %@ servi par %i membre(s) d'équipage; il peut transporter %i passagers et fait %.2f mètres.";
@@ -57,14 +57,14 @@
 "planet.films" = "Films";
 
 // MARK: Film Fields
-"film.description" = "%@ est l'épisode #%d de StarWars. Il est sorti le %@.";
-"film.episodeID" = "Episode #";
-"film.title" = "Titre";
-"film.openingCrawl" = "Texte d'ouverture";
-"film.director" = "Directeur";
-"film.producer" = "Producteur";
-"film.releaseDate" = "Date de Sortie";
-"film.characters" = "Personnages";
-"film.planets" = "Planètes";
-"film.starships" = "Vaisseaux";
+"movie.description" = "%@ est l'épisode #%d de StarWars. Il est sorti le %@.";
+"movie.episodeID" = "Episode #";
+"movie.title" = "Titre";
+"movie.openingCrawl" = "Texte d'ouverture";
+"movie.director" = "Directeur";
+"movie.producer" = "Producteur";
+"movie.releaseDate" = "Date de Sortie";
+"movie.characters" = "Personnages";
+"movie.planets" = "Planètes";
+"movie.starships" = "Vaisseaux";
 

@@ -14,7 +14,7 @@
 "filters.ships" = "Naves";
 "filters.persons" = "Personagens";
 "filters.planets" = "Planetas";
-"filters.films" = "Filmes";
+"filters.movies" = "Filmes";
 
 // MARK: Ship Fields
 "ship.description" = "A %@ é uma nave %@ com uma tripulação composta por %i pessoas, capaz de levar %i passageiros e com %.2f metros de comprimento.";
@@ -57,13 +57,13 @@
 "planet.films" = "Filmes";
 
 // MARK: Film Fields
-"film.description" = "%@ é o episódio #%d de StarWars. Foi lançado em %@.";
-"film.episodeID" = "Episódio #";
-"film.title" = "Título";
-"film.openingCrawl" = "Texto inicial";
-"film.director" = "Director";
-"film.producer" = "Produtor";
-"film.releaseDate" = "Data de lançamento";
-"film.characters" = "Personagens";
-"film.planets" = "Planetas";
-"film.starships" = "Naves";
+"movie.description" = "%@ é o episódio #%d de StarWars. Foi lançado em %@.";
+"movie.episodeID" = "Episódio #";
+"movie.title" = "Título";
+"movie.openingCrawl" = "Texto inicial";
+"movie.director" = "Director";
+"movie.producer" = "Produtor";
+"movie.releaseDate" = "Data de lançamento";
+"movie.characters" = "Personagens";
+"movie.planets" = "Planetas";
+"movie.starships" = "Naves";

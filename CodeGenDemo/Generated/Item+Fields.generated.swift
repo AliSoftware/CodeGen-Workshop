@@ -13,18 +13,18 @@ extension Item {
     // FIXME: [Stage 6] use `person.homeworld.displayName ?? "?"` for `"person.homeworld"`
     var allFields: KeyValuePairs<String, Any> {
         switch self {
-        case .film(let object):
+        case .movie(let object):
             return [
                 // Skip id
-                L10n.Film.episodeID: string(object.episodeID),
-                L10n.Film.title: object.title,
+                L10n.Movie.episodeID: string(object.episodeID),
+                L10n.Movie.title: object.title,
                 // Skip openingCrawl
-                L10n.Film.director: object.director,
-                L10n.Film.producer: object.producer,
-                L10n.Film.releaseDate: object.releaseDate,
-                L10n.Film.characters: object.characters.compactMap { $0.item() },
+                L10n.Movie.director: object.director,
+                L10n.Movie.producer: object.producer,
+                L10n.Movie.releaseDate: object.releaseDate,
+                L10n.Movie.characters: object.characters.compactMap { $0.item() },
                 // Skip planets
-                L10n.Film.starships: object.starships.compactMap { $0.item() },
+                L10n.Movie.starships: object.starships.compactMap { $0.item() },
             ]
         case .person(let object):
             return [

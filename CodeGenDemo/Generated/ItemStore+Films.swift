@@ -1,7 +1,7 @@
 extension ItemStore {
-  static let films: [Film] = [
+  static let movies: [Movie] = [
   // From file: films
-    Film(
+    Movie(
       id: 1,
       episodeID: 4,
       title: "A New Hope",
@@ -65,7 +65,7 @@ extension ItemStore {
         13
       ]
     ),
-    Film(
+    Movie(
       id: 5,
       episodeID: 2,
       title: "Attack of the Clones",
@@ -152,7 +152,7 @@ extension ItemStore {
         58
       ]
     ),
-    Film(
+    Movie(
       id: 4,
       episodeID: 1,
       title: "The Phantom Menace",
@@ -228,7 +228,7 @@ extension ItemStore {
         39
       ]
     ),
-    Film(
+    Movie(
       id: 6,
       episodeID: 3,
       title: "Revenge of the Sith",
@@ -320,7 +320,7 @@ extension ItemStore {
         68
       ]
     ),
-    Film(
+    Movie(
       id: 3,
       episodeID: 6,
       title: "Return of the Jedi",
@@ -390,7 +390,7 @@ extension ItemStore {
         2
       ]
     ),
-    Film(
+    Movie(
       id: 2,
       episodeID: 5,
       title: "The Empire Strikes Back",
@@ -453,7 +453,7 @@ extension ItemStore {
         17
       ]
     ),
-    Film(
+    Movie(
       id: 7,
       episodeID: 7,
       title: "The Force Awakens",

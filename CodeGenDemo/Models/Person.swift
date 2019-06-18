@@ -19,7 +19,7 @@ struct Person: Model, AutoEquatable, Encodable {
     let eyeColor: String
     let homeworld: ID<Planet>
     // sourcery:begin:skipEquality
-    let films: [ID<Film>]
+    let films: [ID<Movie>]
     let starships: [ID<Ship>]
     // sourcery:end
 }

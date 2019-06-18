@@ -1,10 +1,10 @@
 extension ItemStore {
-  static let films: [Film] = [
+  static let movies: [Movie] = [
   {% for file in files %}
   // From file: {{file.name}}
   {% if file.documents.first.data %}
   {% for film in file.documents.first.data %}
-    Film(
+    Movie(
       id: {{film.url|replace:"https://swapi.co/api/films/",""|replace:"/",""}},
       episodeID: {{film.episode_id}},
       title: "{{film.title}}",

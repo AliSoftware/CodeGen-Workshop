@@ -14,7 +14,7 @@
 "filters.ships" = "Ships";
 "filters.persons" = "Characters";
 "filters.planets" = "Planets";
-"filters.films" = "Films";
+"filters.movies" = "Films";
 
 // MARK: Ship Fields
 "ship.description" = "The %@ is a %@ ship which is crewed by %i people, can carry %i passengers and is %.2f meters long.";
@@ -57,13 +57,13 @@
 "planet.films" = "Films";
 
 // MARK: Film Fields
-"film.description" = "%@ is StarWars' episode #%d. It was released in %@.";
-"film.episodeID" = "Episode #";
-"film.title" = "Title";
-"film.openingCrawl" = "Opening Crawl";
-"film.director" = "Director";
-"film.producer" = "Producer";
-"film.releaseDate" = "Release Date";
-"film.characters" = "Characters";
-"film.planets" = "Planets";
-"film.starships" = "Starships";
+"movie.description" = "%@ is StarWars' episode #%d. It was released in %@.";
+"movie.episodeID" = "Episode #";
+"movie.title" = "Title";
+"movie.openingCrawl" = "Opening Crawl";
+"movie.director" = "Director";
+"movie.producer" = "Producer";
+"movie.releaseDate" = "Release Date";
+"movie.characters" = "Characters";
+"movie.planets" = "Planets";
+"movie.starships" = "Starships";

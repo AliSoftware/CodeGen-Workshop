@@ -4,7 +4,7 @@
 import UIKit
 
 enum Item: AutoEquatable {
-    case film(Film)
+    case movie(Movie)
     case person(Person)
     case planet(Planet)
     case ship(Ship)
@@ -13,8 +13,8 @@ enum Item: AutoEquatable {
 extension Item {
     var image: UIImage {
         switch self {
-        case .film:
-            return Asset.Items.film.image
+        case .movie:
+            return Asset.Items.movie.image
         case .person:
             return Asset.Items.person.image
         case .planet:
@@ -28,8 +28,8 @@ extension Item {
 extension Item: CustomStringConvertible {
     var description: String {
         switch self {
-        case .film(let film):
-            return film.description
+        case .movie(let movie):
+            return movie.description
         case .person(let person):
             return person.description
         case .planet(let planet):
@@ -43,8 +43,8 @@ extension Item: CustomStringConvertible {
 extension Item {
     var name: String {
         switch self {
-        case .film(let film):
-            return film.title
+        case .movie(let movie):
+            return movie.title
         case .person(let person):
             return person.name
         case .planet(let planet):
@@ -62,9 +62,9 @@ extension Item: Encodable {
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         switch self {
-        case .film(let film):
-            try container.encode("film", forKey: .type)
-            try container.encode(film, forKey: .item)
+        case .movie(let movie):
+            try container.encode("movie", forKey: .type)
+            try container.encode(movie, forKey: .item)
         case .person(let person):
             try container.encode("person", forKey: .type)
             try container.encode(person, forKey: .item)
@@ -81,8 +81,8 @@ extension Item: Encodable {
 extension ID {
     func item() -> Item? {
         switch self {
-        case let id as ID<Film>:
-            return ItemStore.shared[id].map { .film($0) }
+        case let id as ID<Movie>:
+            return ItemStore.shared[id].map { .movie($0) }
         case let id as ID<Person>:
             return ItemStore.shared[id].map { .person($0) }
         case let id as ID<Planet>:
