@@ -10,7 +10,7 @@ import Foundation
 // FIXME: [Stage 6] sourcery – make Planet conform to Model: See it be added everywhere automatically thanks to Sourcery
 // FIXME: [Stage 7] sourcery custom encodable
 struct Planet: /* Model, */ AutoEquatable, Encodable {
-    // sourcery:skipEquality
+    // sourcery: skipEquality, skipField
     let id: Int
     let name: String
     let rotationPeriod: Int?

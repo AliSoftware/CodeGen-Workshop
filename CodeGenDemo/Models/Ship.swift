@@ -9,7 +9,7 @@ import Foundation
 
 // FIXME: [Stage 7] sourcery custom encodable
 struct Ship: Model, AutoEquatable, Encodable {
-    // sourcery:skipEquality
+    // sourcery: skipEquality, skipField
     let id: Int
     let name: String
     let model: String

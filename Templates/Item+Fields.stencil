@@ -1,0 +1,31 @@
+
+import Foundation
+
+private func string<T>(_ value: T?) -> String {
+    guard let value = value else { return "-" }
+    return String(describing: value)
+}
+
+extension Item {
+    // FIXME: [Stage 6] use `person.homeworld.displayName ?? "?"` for `"person.homeworld"`
+    var allFields: KeyValuePairs<String, Any> {
+        switch self {
+        {% for type in types.implementing.Model %}
+        case .{{type.name|lowercase}}(let object):
+            return [
+                {% for var in type.storedVariables %}
+                {% if var.annotations.skipField %}
+                // Skip {{var.name}}
+                {% elif var.typeName.isArray %}
+                L10n.{{type.name}}.{{var.name}}: object.{{var.name}}.compactMap { $0.item() },
+                {% elif var.typeName.name == "String" %}
+                L10n.{{type.name}}.{{var.name}}: object.{{var.name}},
+                {% else %}
+                L10n.{{type.name}}.{{var.name}}: string(object.{{var.name}}),
+                {% endif %}
+                {% endfor %}
+            ]
+        {% endfor %}
+        }
+    }
+}

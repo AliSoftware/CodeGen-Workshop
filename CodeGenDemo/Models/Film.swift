@@ -11,16 +11,18 @@ import Foundation
 // FIXME: [Stage 7] sourcery custom encodable
 // sourcery: nameProperty=title
 struct Film: Model, AutoEquatable, Encodable {
-    // sourcery:skipEquality
+    // sourcery: skipEquality, skipField
     let id: Int
     let episodeID: Int
     let title: String
+    // sourcery:skipField
     let openingCrawl: String
     let director: String
     let producer: String
     let releaseDate: String
     // sourcery:begin:skipEquality
     let characters: [ID<Person>]
+    // sourcery:skipField
     let planets: [Int] // FIXME: [Stage 6] – Change to [ID<Planet>] 
     let starships: [ID<Ship>]
     // sourcery:end
