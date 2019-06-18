@@ -7,14 +7,13 @@
 
 import Foundation
 
-// FIXME: [Stage 7] sourcery custom encodable
 // sourcery: nameProperty=title
-struct Movie: Model, AutoEquatable, Encodable {
-    // sourcery: skipEquality, skipField
+struct Movie: Model, AutoEquatable, AutoEncodable {
+    // sourcery: skipEquality, skipField, skipEncodable
     let id: Int
     let episodeID: Int
     let title: String
-    // sourcery:skipField
+    // sourcery:skipField, skipEncodable
     let openingCrawl: String
     let director: String
     let producer: String

@@ -7,9 +7,8 @@
 
 import Foundation
 
-// FIXME: [Stage 7] sourcery custom encodable
-struct Planet: Model, AutoEquatable, Encodable {
-    // sourcery: skipEquality, skipField
+struct Planet: Model, AutoEquatable, AutoEncodable {
+    // sourcery: skipEquality, skipField, skipEncodable
     let id: Int
     let name: String
     let rotationPeriod: Int?

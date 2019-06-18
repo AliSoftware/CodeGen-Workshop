@@ -11,3 +11,4 @@ protocol Model: CustomStringConvertible {
 
 // Marker Protocol for Sourcery
 protocol AutoEquatable {}
+protocol AutoEncodable {}

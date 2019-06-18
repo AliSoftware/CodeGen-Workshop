@@ -19,6 +19,7 @@
 		3847590722B966D600C83467 /* Item.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384758F422B86BE700C83467 /* Item.generated.swift */; };
 		3847590822B967C900C83467 /* Item+Fields.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384758F622B8742C00C83467 /* Item+Fields.generated.swift */; };
 		384758F922B876C300C83467 /* ItemStore.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384758F822B876C300C83467 /* ItemStore.generated.swift */; };
+		384758FD22B928C000C83467 /* AutoEncodable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384758FC22B928C000C83467 /* AutoEncodable.generated.swift */; };
 		385D00D622AD43CC00319703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D522AD43CC00319703 /* AppDelegate.swift */; };
 		385D00D822AD43CC00319703 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D722AD43CC00319703 /* ItemListViewController.swift */; };
 		385D00DA22AD43CC00319703 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D922AD43CC00319703 /* DetailViewController.swift */; };
@@ -57,6 +58,7 @@
 		384758F422B86BE700C83467 /* Item.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.generated.swift; sourceTree = "<group>"; };
 		384758F622B8742C00C83467 /* Item+Fields.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+Fields.generated.swift"; sourceTree = "<group>"; };
 		384758F822B876C300C83467 /* ItemStore.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.generated.swift; sourceTree = "<group>"; };
+		384758FC22B928C000C83467 /* AutoEncodable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEncodable.generated.swift; sourceTree = "<group>"; };
 		385D00D222AD43CC00319703 /* CodeGenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeGenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		385D00D522AD43CC00319703 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		385D00D722AD43CC00319703 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		385D013A22AD5B9700319703 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				384758FC22B928C000C83467 /* AutoEncodable.generated.swift */,
 				384758F822B876C300C83467 /* ItemStore.generated.swift */,
 				384758F622B8742C00C83467 /* Item+Fields.generated.swift */,
 				384758F422B86BE700C83467 /* Item.generated.swift */,
@@ -428,6 +431,7 @@
 				38FB4F5622B585DC00C0FC7A /* Model.swift in Sources */,
 				3847590822B967C900C83467 /* Item+Fields.generated.swift in Sources */,
 				38A926CE22B466570043713F /* ItemStore+Ships.swift in Sources */,
+				384758FD22B928C000C83467 /* AutoEncodable.generated.swift in Sources */,
 				38A926D322B46ED00043713F /* ItemStore+Films.swift in Sources */,
 				385D00D622AD43CC00319703 /* AppDelegate.swift in Sources */,
 				3842FAD222B3EECF006CDE8F /* Person.swift in Sources */,

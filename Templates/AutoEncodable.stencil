@@ -1,0 +1,19 @@
+{% for type in types.implementing.AutoEncodable %}
+// MARK: - {{ type.name }} AutoEncodable
+
+extension {{ type.name }}: Encodable {
+  enum CodingKeys: String, CodingKey {
+    {% for var in type.storedVariables where not var.annotations.skipEncodable %}
+    case {{var.name}}
+    {% endfor %}
+  }
+
+  func encode(to encoder: Encoder) throws {
+    var container = encoder.container(keyedBy: CodingKeys.self)
+    {% for var in type.storedVariables where not var.annotations.skipEncodable %}
+    try container.encode(self.{{ var.name }}, forKey: .{{var.name}})
+    {% endfor %}
+  }
+}
+
+{% endfor %}
