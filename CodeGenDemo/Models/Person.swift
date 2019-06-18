@@ -8,7 +8,8 @@
 import Foundation
 
 // FIXME: [Stage 7] sourcery custom encodable
-struct Person: Model, Equatable, Encodable {
+struct Person: Model, AutoEquatable, Encodable {
+    // sourcery:skipEquality
     let id: Int
     let name: String
     let height: Int?
@@ -17,8 +18,10 @@ struct Person: Model, Equatable, Encodable {
     let skinColor: String
     let eyeColor: String
     let homeworld: Int // FIXME: [Stage 6] – Change to ID<Planet>
+    // sourcery:begin:skipEquality
     let films: [ID<Film>]
     let starships: [ID<Ship>]
+    // sourcery:end
 }
 
 extension Person: CustomStringConvertible {

@@ -8,7 +8,8 @@
 import Foundation
 
 // FIXME: [Stage 7] sourcery custom encodable
-struct Ship: Model, Equatable, Encodable {
+struct Ship: Model, AutoEquatable, Encodable {
+    // sourcery:skipEquality
     let id: Int
     let name: String
     let model: String
@@ -20,8 +21,10 @@ struct Ship: Model, Equatable, Encodable {
     let crew: Int?
     let passengers: Int?
 
+    // sourcery:begin:skipEquality
     let pilots: [ID<Person>]
     let films: [ID<Film>]
+    // sourcery:end
 }
 
 extension Ship: CustomStringConvertible {

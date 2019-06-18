@@ -9,7 +9,8 @@ import Foundation
 
 // FIXME: [Stage 6] sourcery – make Planet conform to Model: See it be added everywhere automatically thanks to Sourcery
 // FIXME: [Stage 7] sourcery custom encodable
-struct Planet: /* Model, */ Equatable, Encodable {
+struct Planet: /* Model, */ AutoEquatable, Encodable {
+    // sourcery:skipEquality
     let id: Int
     let name: String
     let rotationPeriod: Int?
@@ -20,8 +21,10 @@ struct Planet: /* Model, */ Equatable, Encodable {
     let terrain: String
     let surfaceWater: Float?
     let population: Float?
+    // sourcery:begin:skipEquality
     let residents: [ID<Person>]
     let films: [ID<Film>]
+    // sourcery:end
 }
 
 extension Planet: CustomStringConvertible {

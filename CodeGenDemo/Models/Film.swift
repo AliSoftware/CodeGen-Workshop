@@ -9,7 +9,8 @@ import Foundation
 
 // FIXME: [Stage 7] rename and see Sourcery's magic
 // FIXME: [Stage 7] sourcery custom encodable
-struct Film: Model, Equatable, Encodable {
+struct Film: Model, AutoEquatable, Encodable {
+    // sourcery:skipEquality
     let id: Int
     let episodeID: Int
     let title: String
@@ -17,9 +18,11 @@ struct Film: Model, Equatable, Encodable {
     let director: String
     let producer: String
     let releaseDate: String
+    // sourcery:begin:skipEquality
     let characters: [ID<Person>]
     let planets: [Int] // FIXME: [Stage 6] – Change to [ID<Planet>] 
     let starships: [ID<Ship>]
+    // sourcery:end
 }
 
 extension Film: CustomStringConvertible {
