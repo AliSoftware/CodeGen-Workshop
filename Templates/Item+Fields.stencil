@@ -16,6 +16,8 @@ extension Item {
                 {% for var in type.storedVariables %}
                 {% if var.annotations.skipField %}
                 // Skip {{var.name}}
+                {% elif var.typeName.generic.name == "ID" %}
+                L10n.{{type.name}}.{{var.name}}: object.{{var.name}}.displayName ?? "?",
                 {% elif var.typeName.isArray %}
                 L10n.{{type.name}}.{{var.name}}: object.{{var.name}}.compactMap { $0.item() },
                 {% elif var.typeName.name == "String" %}

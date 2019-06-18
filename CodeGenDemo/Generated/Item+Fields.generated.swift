@@ -35,7 +35,7 @@ extension Item {
                 L10n.Person.hairColor: object.hairColor,
                 L10n.Person.skinColor: object.skinColor,
                 L10n.Person.eyeColor: object.eyeColor,
-                L10n.Person.homeworld: string(object.homeworld),
+                L10n.Person.homeworld: object.homeworld.displayName ?? "?",
                 L10n.Person.films: object.films.compactMap { $0.item() },
                 L10n.Person.starships: object.starships.compactMap { $0.item() },
             ]
