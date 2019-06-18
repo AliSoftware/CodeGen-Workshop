@@ -28,7 +28,7 @@ fileprivate func compareArrays<T>(lhs: [T], rhs: [T], compare: (_ lhs: T, _ rhs:
 // MARK: - AutoEquatable for Enums
 // MARK: - Item AutoEquatable
 extension Item: Equatable {}
-public func == (lhs: Item, rhs: Item) -> Bool {
+func == (lhs: Item, rhs: Item) -> Bool {
     switch (lhs, rhs) {
     case (.ship(let lhs), .ship(let rhs)):
         return lhs == rhs
