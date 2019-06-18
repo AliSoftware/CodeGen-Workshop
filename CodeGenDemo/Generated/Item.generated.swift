@@ -34,3 +34,16 @@ extension Item: CustomStringConvertible {
         }
     }
 }
+
+extension Item {
+    var name: String {
+        switch self {
+        case .film(let film):
+            return film.title
+        case .person(let person):
+            return person.name
+        case .ship(let ship):
+            return ship.name
+        }
+    }
+}

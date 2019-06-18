@@ -9,6 +9,7 @@ import Foundation
 
 // FIXME: [Stage 7] rename and see Sourcery's magic
 // FIXME: [Stage 7] sourcery custom encodable
+// sourcery: nameProperty=title
 struct Film: Model, AutoEquatable, Encodable {
     // sourcery:skipEquality
     let id: Int

@@ -27,3 +27,14 @@ extension Item: CustomStringConvertible {
         }
     }
 }
+
+extension Item {
+    var name: String {
+        switch self {
+        {% for type in types.implementing.Model %}
+        case .{{type.name|lowercase}}(let {{type.name|lowercase}}):
+            return {{type.name|lowercase}}.{{type.annotations.nameProperty|default:"name"}}
+        {% endfor %}
+        }
+    }
+}

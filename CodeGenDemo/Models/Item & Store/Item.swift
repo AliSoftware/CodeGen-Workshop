@@ -7,21 +7,6 @@
 
 import UIKit
 
-// FIXME: [Stage 4] sourcery, use custom annotation to identify the name property
-extension Item {
-    var name: String {
-        switch self {
-        case .ship(let ship):
-            return ship.name
-        case .person(let person):
-            return person.name
-        case .film(let film):
-            return film.title
-        }
-    }
-}
-
-
 // FIXME: [Stage 4] sourcery – generate that Encodable implementation
 extension Item: Encodable {
     enum CodingKeys: CodingKey {
