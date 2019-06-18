@@ -1,5 +1,29 @@
+import UIKit
+
 enum Item: AutoEquatable {
 {% for type in types.implementing.Model %}
     case {{type.name|lowercase}}({{type.name}})
 {% endfor %}
+}
+
+extension Item {
+    var image: UIImage {
+        switch self {
+        {% for type in types.implementing.Model %}
+        case .{{type.name|lowercase}}:
+            return Asset.Items.{{type.name|lowercase}}.image
+        {% endfor %}
+        }
+    }
+}
+
+extension Item: CustomStringConvertible {
+    var description: String {
+        switch self {
+        {% for type in types.implementing.Model %}
+        case .{{type.name|lowercase}}(let {{type.name|lowercase}}):
+            return {{type.name|lowercase}}.description
+        {% endfor %}
+        }
+    }
 }

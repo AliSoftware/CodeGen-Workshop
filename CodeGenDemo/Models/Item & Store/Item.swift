@@ -7,34 +7,6 @@
 
 import UIKit
 
-// FIXME: [Stage 4] sourcery – generate the SwiftGen image constant from the item case name
-extension Item {
-    var image: UIImage {
-        switch self {
-        case .ship:
-            return Asset.Items.ship.image
-        case .person:
-            return Asset.Items.person.image
-        case .film:
-            return Asset.Items.film.image
-        }
-    }
-}
-
-// FIXME: [Stage 4] sourcery – generate this enum, looping on all cases
-extension Item: CustomStringConvertible {
-    var description: String {
-        switch self {
-        case .ship(let ship):
-            return ship.description
-        case .person(let person):
-            return person.description
-        case .film(let film):
-            return film.description
-        }
-    }
-}
-
 // FIXME: [Stage 4] sourcery, use custom annotation to identify the name property
 extension Item {
     var name: String {
