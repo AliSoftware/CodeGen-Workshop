@@ -6,6 +6,7 @@ import UIKit
 enum Item: AutoEquatable {
     case film(Film)
     case person(Person)
+    case planet(Planet)
     case ship(Ship)
 }
 
@@ -16,6 +17,8 @@ extension Item {
             return Asset.Items.film.image
         case .person:
             return Asset.Items.person.image
+        case .planet:
+            return Asset.Items.planet.image
         case .ship:
             return Asset.Items.ship.image
         }
@@ -29,6 +32,8 @@ extension Item: CustomStringConvertible {
             return film.description
         case .person(let person):
             return person.description
+        case .planet(let planet):
+            return planet.description
         case .ship(let ship):
             return ship.description
         }
@@ -42,6 +47,8 @@ extension Item {
             return film.title
         case .person(let person):
             return person.name
+        case .planet(let planet):
+            return planet.name
         case .ship(let ship):
             return ship.name
         }
@@ -61,6 +68,9 @@ extension Item: Encodable {
         case .person(let person):
             try container.encode("person", forKey: .type)
             try container.encode(person, forKey: .item)
+        case .planet(let planet):
+            try container.encode("planet", forKey: .type)
+            try container.encode(planet, forKey: .item)
         case .ship(let ship):
             try container.encode("ship", forKey: .type)
             try container.encode(ship, forKey: .item)
@@ -75,6 +85,8 @@ extension ID {
             return ItemStore.shared[id].map { .film($0) }
         case let id as ID<Person>:
             return ItemStore.shared[id].map { .person($0) }
+        case let id as ID<Planet>:
+            return ItemStore.shared[id].map { .planet($0) }
         case let id as ID<Ship>:
             return ItemStore.shared[id].map { .ship($0) }
         default:

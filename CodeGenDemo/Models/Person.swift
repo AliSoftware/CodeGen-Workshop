@@ -17,7 +17,7 @@ struct Person: Model, AutoEquatable, Encodable {
     let hairColor: String
     let skinColor: String
     let eyeColor: String
-    let homeworld: Int // FIXME: [Stage 6] – Change to ID<Planet>
+    let homeworld: ID<Planet>
     // sourcery:begin:skipEquality
     let films: [ID<Film>]
     let starships: [ID<Ship>]

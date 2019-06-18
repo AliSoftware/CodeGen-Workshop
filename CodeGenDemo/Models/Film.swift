@@ -23,7 +23,7 @@ struct Film: Model, AutoEquatable, Encodable {
     // sourcery:begin:skipEquality
     let characters: [ID<Person>]
     // sourcery:skipField
-    let planets: [Int] // FIXME: [Stage 6] – Change to [ID<Planet>] 
+    let planets: [ID<Planet>] 
     let starships: [ID<Ship>]
     // sourcery:end
 }

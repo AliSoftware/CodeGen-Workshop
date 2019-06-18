@@ -39,6 +39,21 @@ extension Item {
                 L10n.Person.films: object.films.compactMap { $0.item() },
                 L10n.Person.starships: object.starships.compactMap { $0.item() },
             ]
+        case .planet(let object):
+            return [
+                // Skip id
+                L10n.Planet.name: object.name,
+                L10n.Planet.rotationPeriod: string(object.rotationPeriod),
+                L10n.Planet.orbitalPeriod: string(object.orbitalPeriod),
+                L10n.Planet.diameter: string(object.diameter),
+                L10n.Planet.climate: object.climate,
+                L10n.Planet.gravity: object.gravity,
+                L10n.Planet.terrain: object.terrain,
+                L10n.Planet.surfaceWater: string(object.surfaceWater),
+                L10n.Planet.population: string(object.population),
+                L10n.Planet.residents: object.residents.compactMap { $0.item() },
+                L10n.Planet.films: object.films.compactMap { $0.item() },
+            ]
         case .ship(let object):
             return [
                 // Skip id

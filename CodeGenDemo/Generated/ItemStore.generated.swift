@@ -11,6 +11,7 @@ class ItemStore {
     self.items = [
       ItemStore.films.map { .film($0) },
       ItemStore.persons.map { .person($0) },
+      ItemStore.planets.map { .planet($0) },
       ItemStore.ships.map { .ship($0) },
     ].flatMap({$0}).sorted(by: { $0.name < $1.name })
   }
@@ -29,6 +30,12 @@ extension ItemStore {
     }
     return nil
   }
+  subscript(id: ID<Planet>) -> Planet? {
+    for case .planet(let object) in self.items where object.id == id.id {
+      return object
+    }
+    return nil
+  }
   subscript(id: ID<Ship>) -> Ship? {
     for case .ship(let object) in self.items where object.id == id.id {
       return object
@@ -42,6 +49,7 @@ extension ItemStore {
     L10n.Filters.all: { _ in true },
     L10n.Filters.films: { guard case .film = $0 else { return false }; return true },
     L10n.Filters.persons: { guard case .person = $0 else { return false }; return true },
+    L10n.Filters.planets: { guard case .planet = $0 else { return false }; return true },
     L10n.Filters.ships: { guard case .ship = $0 else { return false }; return true },
   ]
 }
