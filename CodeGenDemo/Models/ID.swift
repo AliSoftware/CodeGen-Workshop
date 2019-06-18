@@ -12,24 +12,6 @@ struct ID<T: Model>: Equatable {
 }
 
 extension ID {
-    // FIXME: [Stage 4] sourcery – Generate this switch
-    func item() -> Item? {
-        switch self {
-        case let id as ID<Ship>:
-            return ItemStore.shared[id].map { .ship($0) }
-        case let id as ID<Person>:
-            return ItemStore.shared[id].map { .person($0) }
-        case let id as ID<Film>:
-            return ItemStore.shared[id].map { .film($0) }
-        default:
-            return nil
-        }
-    }
-}
-
-
-
-extension ID {
     var displayName: String? {
         return item()?.name
     }

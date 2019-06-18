@@ -54,3 +54,16 @@ extension Item: Encodable {
         }
     }
 }
+
+extension ID {
+    func item() -> Item? {
+        switch self {
+        {% for type in types.implementing.Model %}
+        case let id as ID<{{type.name}}>:
+            return ItemStore.shared[id].map { .{{type.name|lowercase}}($0) }
+        {% endfor %}
+        default:
+            return nil
+        }
+    }
+}
