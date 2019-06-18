@@ -1,0 +1,34 @@
+class ItemStore {
+  // Singletons are bad. Kids, don't do this at home (But hey, this is just a demo)
+  static let shared = ItemStore()
+
+  let items: [Item]
+
+  private init() {
+    self.items = [
+    {% for type in types.implementing.Model %}
+      ItemStore.{{type.name|lowercase}}s.map { .{{type.name|lowercase}}($0) },
+    {% endfor %}
+    ].flatMap({$0}).sorted(by: { $0.name < $1.name })
+  }
+}
+
+extension ItemStore {
+  {% for type in types.implementing.Model %}
+  subscript(id: ID<{{type.name}}>) -> {{type.name}}? {
+    for case .{{type.name|lowercase}}(let object) in self.items where object.id == id.id {
+      return object
+    }
+    return nil
+  }
+  {% endfor %}
+}
+
+extension ItemStore {
+  static let filters: KeyValuePairs<String, (Item) -> Bool> = [
+    L10n.Filters.all: { _ in true },
+    {% for type in types.implementing.Model %}
+    L10n.Filters.{{type.name|lowercase}}s: { guard case .{{type.name|lowercase}} = $0 else { return false }; return true },
+    {% endfor %}
+  ]
+}

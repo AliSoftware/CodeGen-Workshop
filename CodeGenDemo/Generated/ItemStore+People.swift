@@ -1,5 +1,5 @@
 extension ItemStore {
-  static let people: [Person] = [
+  static let persons: [Person] = [
   // From file: people
     Person(
       id: 1,

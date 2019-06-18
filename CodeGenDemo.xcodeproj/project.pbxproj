@@ -18,6 +18,7 @@
 		3847590622B9664700C83467 /* Lottie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB4F7222B81CB200C0FC7A /* Lottie.swift */; };
 		3847590722B966D600C83467 /* Item.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384758F422B86BE700C83467 /* Item.generated.swift */; };
 		3847590822B967C900C83467 /* Item+Fields.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384758F622B8742C00C83467 /* Item+Fields.generated.swift */; };
+		384758F922B876C300C83467 /* ItemStore.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384758F822B876C300C83467 /* ItemStore.generated.swift */; };
 		385D00D622AD43CC00319703 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D522AD43CC00319703 /* AppDelegate.swift */; };
 		385D00D822AD43CC00319703 /* ItemListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D722AD43CC00319703 /* ItemListViewController.swift */; };
 		385D00DA22AD43CC00319703 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D00D922AD43CC00319703 /* DetailViewController.swift */; };
@@ -36,7 +37,6 @@
 		385D014D22AD5E0100319703 /* SFDistantGalaxyAltOutline-I.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 385D014322AD5E0100319703 /* SFDistantGalaxyAltOutline-I.ttf */; };
 		385D014E22AD5E0100319703 /* SFDistantGalaxyAltOutline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 385D014422AD5E0100319703 /* SFDistantGalaxyAltOutline.ttf */; };
 		385D015022AD5F8000319703 /* Ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D014F22AD5F8000319703 /* Ship.swift */; };
-		385D015322AD687F00319703 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385D015222AD687F00319703 /* ItemStore.swift */; };
 		38A926CE22B466570043713F /* ItemStore+Ships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A926CC22B466570043713F /* ItemStore+Ships.swift */; };
 		38A926CF22B466570043713F /* ItemStore+People.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A926CD22B466570043713F /* ItemStore+People.swift */; };
 		38A926D322B46ED00043713F /* ItemStore+Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A926D222B46ED00043713F /* ItemStore+Films.swift */; };
@@ -56,6 +56,7 @@
 		3842FAD522B3EF5A006CDE8F /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		384758F422B86BE700C83467 /* Item.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.generated.swift; sourceTree = "<group>"; };
 		384758F622B8742C00C83467 /* Item+Fields.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+Fields.generated.swift"; sourceTree = "<group>"; };
+		384758F822B876C300C83467 /* ItemStore.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.generated.swift; sourceTree = "<group>"; };
 		385D00D222AD43CC00319703 /* CodeGenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeGenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		385D00D522AD43CC00319703 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		385D00D722AD43CC00319703 /* ItemListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		385D014322AD5E0100319703 /* SFDistantGalaxyAltOutline-I.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFDistantGalaxyAltOutline-I.ttf"; sourceTree = "<group>"; };
 		385D014422AD5E0100319703 /* SFDistantGalaxyAltOutline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFDistantGalaxyAltOutline.ttf; sourceTree = "<group>"; };
 		385D014F22AD5F8000319703 /* Ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ship.swift; sourceTree = "<group>"; };
-		385D015222AD687F00319703 /* ItemStore.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; tabWidth = 2; };
 		38A926CC22B466570043713F /* ItemStore+Ships.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemStore+Ships.swift"; sourceTree = "<group>"; };
 		38A926CD22B466570043713F /* ItemStore+People.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemStore+People.swift"; sourceTree = "<group>"; };
 		38A926D222B46ED00043713F /* ItemStore+Films.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemStore+Films.swift"; sourceTree = "<group>"; };
@@ -204,6 +204,7 @@
 		385D013A22AD5B9700319703 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
+				384758F822B876C300C83467 /* ItemStore.generated.swift */,
 				384758F622B8742C00C83467 /* Item+Fields.generated.swift */,
 				384758F422B86BE700C83467 /* Item.generated.swift */,
 				38DB871C22B8603B0060FB9F /* AutoEquatable.generated.swift */,
@@ -226,21 +227,12 @@
 			children = (
 				38FB4F5522B585DC00C0FC7A /* Model.swift */,
 				38FB4F5B22B7E8F700C0FC7A /* ID.swift */,
-				38FB4F5722B585FC00C0FC7A /* Item & Store */,
 				385D014F22AD5F8000319703 /* Ship.swift */,
 				3842FAD122B3EECF006CDE8F /* Person.swift */,
 				3842FAD322B3EF2A006CDE8F /* Planet.swift */,
 				3842FAD522B3EF5A006CDE8F /* Film.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		38FB4F5722B585FC00C0FC7A /* Item & Store */ = {
-			isa = PBXGroup;
-			children = (
-				385D015222AD687F00319703 /* ItemStore.swift */,
-			);
-			path = "Item & Store";
 			sourceTree = "<group>";
 		};
 		7CCAAA0E5DF1A019222FD827 /* Frameworks */ = {
@@ -426,6 +418,7 @@
 				3847590422B965CD00C83467 /* Strings.swift in Sources */,
 				385D015022AD5F8000319703 /* Ship.swift in Sources */,
 				385D012C22AD519E00319703 /* WelcomeViewController.swift in Sources */,
+				384758F922B876C300C83467 /* ItemStore.generated.swift in Sources */,
 				3847590722B966D600C83467 /* Item.generated.swift in Sources */,
 				3847590522B9661B00C83467 /* InfoPlist.swift in Sources */,
 				384758FE22B961B500C83467 /* Assets.swift in Sources */,
@@ -438,7 +431,6 @@
 				38A926D322B46ED00043713F /* ItemStore+Films.swift in Sources */,
 				385D00D622AD43CC00319703 /* AppDelegate.swift in Sources */,
 				3842FAD222B3EECF006CDE8F /* Person.swift in Sources */,
-				385D015322AD687F00319703 /* ItemStore.swift in Sources */,
 				38DB871D22B8603B0060FB9F /* AutoEquatable.generated.swift in Sources */,
 				38A926CF22B466570043713F /* ItemStore+People.swift in Sources */,
 				3847590622B9664700C83467 /* Lottie.swift in Sources */,

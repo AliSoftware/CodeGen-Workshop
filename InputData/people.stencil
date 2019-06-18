@@ -1,5 +1,5 @@
 extension ItemStore {
-  static let people: [Person] = [
+  static let persons: [Person] = [
   {% for file in files %}
   // From file: {{file.name}}
   {% if file.documents.first.data %}
