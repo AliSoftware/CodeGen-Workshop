@@ -8,7 +8,7 @@
 import Foundation
 
 // sourcery: nameProperty=title
-struct Movie: Model, AutoEquatable, AutoEncodable {
+struct Movie: Model, AutoEquatable, AutoEncodable, AutoInit {
     // sourcery: skipEquality, skipField, skipEncodable
     let id: Int
     let episodeID: Int
@@ -23,6 +23,21 @@ struct Movie: Model, AutoEquatable, AutoEncodable {
     // sourcery:skipField
     let planets: [ID<Planet>] 
     let starships: [ID<Ship>]
+    // sourcery:end
+    
+    // sourcery:inline:auto:Movie.AutoInit
+    init(id: Int, episodeID: Int, title: String, openingCrawl: String, director: String, producer: String, releaseDate: String, characters: [ID<Person>], planets: [ID<Planet>], starships: [ID<Ship>]) {
+        self.id = id
+        self.episodeID = episodeID
+        self.title = title
+        self.openingCrawl = openingCrawl
+        self.director = director
+        self.producer = producer
+        self.releaseDate = releaseDate
+        self.characters = characters
+        self.planets = planets
+        self.starships = starships
+    }
     // sourcery:end
 }
 

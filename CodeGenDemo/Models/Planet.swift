@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Planet: Model, AutoEquatable, AutoEncodable {
+class Planet: Model, AutoEquatable, AutoEncodable, AutoInit {
     // sourcery: skipEquality, skipField, skipEncodable
     let id: Int
     let name: String
@@ -22,6 +22,23 @@ struct Planet: Model, AutoEquatable, AutoEncodable {
     // sourcery:begin:skipEquality
     let residents: [ID<Person>]
     let films: [ID<Movie>]
+    // sourcery:end
+    
+    // sourcery:inline:auto:Planet.AutoInit
+    init(id: Int, name: String, rotationPeriod: Int?, orbitalPeriod: Int?, diameter: Int?, climate: String, gravity: String, terrain: String, surfaceWater: Float?, population: Float?, residents: [ID<Person>], films: [ID<Movie>]) {
+        self.id = id
+        self.name = name
+        self.rotationPeriod = rotationPeriod
+        self.orbitalPeriod = orbitalPeriod
+        self.diameter = diameter
+        self.climate = climate
+        self.gravity = gravity
+        self.terrain = terrain
+        self.surfaceWater = surfaceWater
+        self.population = population
+        self.residents = residents
+        self.films = films
+    }
     // sourcery:end
 }
 

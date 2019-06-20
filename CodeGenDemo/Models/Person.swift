@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Person: Model, AutoEquatable, AutoEncodable {
+class Person: Model, AutoEquatable, AutoEncodable, AutoInit {
     // sourcery: skipEquality, skipField, skipEncodable
     let id: Int
     let name: String
@@ -20,6 +20,21 @@ struct Person: Model, AutoEquatable, AutoEncodable {
     // sourcery:begin:skipEquality
     let films: [ID<Movie>]
     let starships: [ID<Ship>]
+    // sourcery:end
+
+    // sourcery:inline:auto:Person.AutoInit
+    init(id: Int, name: String, height: Int?, mass: Float?, hairColor: String, skinColor: String, eyeColor: String, homeworld: ID<Planet>, films: [ID<Movie>], starships: [ID<Ship>]) {
+        self.id = id
+        self.name = name
+        self.height = height
+        self.mass = mass
+        self.hairColor = hairColor
+        self.skinColor = skinColor
+        self.eyeColor = eyeColor
+        self.homeworld = homeworld
+        self.films = films
+        self.starships = starships
+    }
     // sourcery:end
 }
 
